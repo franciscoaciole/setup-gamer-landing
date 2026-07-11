@@ -15,7 +15,7 @@ export default function FinalCTA() {
 
       <div className="relative max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-          Pronto para elevar sua experiência gamer?
+          Pronto para elevar sua experiência?
         </h2>
 
         <p className="mt-6 text-neutral-400 text-base md:text-lg">
