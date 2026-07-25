@@ -17,20 +17,34 @@ export default function Gallery() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {galleryImages.map((image) => (
-            <div
-              key={image.id}
-              className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, 50vw"
-              />
-            </div>
-          ))}
+          {/* Coluna esquerda: fotos 1, 3 e 4 empilhadas */}
+          <div className="grid grid-rows-3 gap-6">
+            {[galleryImages[0], galleryImages[2], galleryImages[3]].map((image) => (
+              <div
+                key={image.id}
+                className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="75vw"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Foto 2: ocupa a altura das três empilhadas */}
+          <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900">
+            <Image
+              src={galleryImages[1].src}
+              alt={galleryImages[1].alt}
+              fill
+              className="object-cover object-[25%_25%]"
+              sizes="50vw"
+            />
+          </div>
         </div>
       </div>
     </section>

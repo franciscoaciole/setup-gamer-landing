@@ -113,10 +113,10 @@ export const faqItems: FAQItem[] = [
   {
     question: "É possível ver o setup funcionando antes de fechar negócio?",
     answer:
-      "Sim, é possível testar o equipamento pessoalmente antes da confirmação da compra.",
+      "Sim, é possível ver o equipamento pessoalmente antes da confirmação da compra.",
   },
   {
-    question: "Vocês realizam entrega?",
+    question: "Realizam entrega?",
     answer:
       "A entrega pode ser combinada conforme a localidade. Entre em contato para verificar a disponibilidade para sua região.",
   },
