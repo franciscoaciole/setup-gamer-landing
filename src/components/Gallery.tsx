@@ -1,10 +1,11 @@
 // src/components/Gallery.tsx
+import Image from "next/image";
 
-const placeholderImages = [
-  { id: 1, label: "Foto 1 — PC montado (frente)" },
-  { id: 2, label: "Foto 2 — PC montado (lateral RGB)" },
-  { id: 3, label: "Foto 3 — Setup completo na mesa" },
-  { id: 4, label: "Foto 4 — Periféricos" },
+const galleryImages = [
+  { id: 1, src: "/images/setup-frente.jpg", alt: "Setup gamer visto de frente" },
+  { id: 2, src: "/images/setup-lateral-rgb.jpg", alt: "Setup gamer visto lateralmente, com iluminação RGB" },
+  { id: 3, src: "/images/setup-mesa.jpg", alt: "Setup gamer completo montado na mesa" },
+  { id: 4, src: "/images/perifericos.jpg", alt: "Periféricos do setup: teclado, mouse e headset" },
 ];
 
 export default function Gallery() {
@@ -16,14 +17,18 @@ export default function Gallery() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {placeholderImages.map((image) => (
+          {galleryImages.map((image) => (
             <div
               key={image.id}
-              className="aspect-video bg-neutral-800 rounded-2xl flex items-center justify-center border border-neutral-700"
+              className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
             >
-              <span className="text-neutral-500 text-sm px-4 text-center">
-                {image.label}
-              </span>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
             </div>
           ))}
         </div>
