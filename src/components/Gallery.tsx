@@ -30,21 +30,32 @@ export default function Gallery() {
         </h2>
 
         {/* Mobile */}
-        <div className="grid gap-6 md:hidden">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
+        {/* Mobile */}
+<div className="grid gap-6 md:hidden">
+  {galleryImages.map((image, index) => (
+    <div
+      key={index}
+      className={`relative rounded-2xl overflow-hidden border border-white/10 bg-neutral-900 ${
+        index === 1
+          ? "aspect-square"   // Foto vertical (gabinete)
+          : "aspect-video"    // Fotos horizontais
+      }`}
+    >
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        quality={100}
+        sizes="100vw"
+        className={`${
+          index === 1
+            ? "object-contain p-2"
+            : "object-cover object-center"
+        }`}
+      />
+    </div>
+  ))}
+</div>
 
         {/* Desktop */}
         <div className="hidden md:grid grid-cols-2 gap-6 h-[780px]">
