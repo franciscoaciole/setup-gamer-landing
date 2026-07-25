@@ -116,7 +116,7 @@ export const faqItems: FAQItem[] = [
       "Sim, é possível ver o equipamento funcionando antes da confirmação da compra.",
   },
   {
-    question: "Realizam entrega?",
+    question: "Vocês fazem entrega?",
     answer:
       "A entrega pode ser combinada conforme a localidade. Entre em contato para verificar a disponibilidade para sua região.",
   },
