@@ -1,50 +1,96 @@
 // src/components/Gallery.tsx
+
 import Image from "next/image";
 
 const galleryImages = [
-  { id: 1, src: "/images/setup-frente.jpg", alt: "Setup gamer visto de frente" },
-  { id: 2, src: "/images/setup-lateral-rgb.jpg", alt: "Setup gamer visto lateralmente, com iluminação RGB" },
-  { id: 3, src: "/images/setup-mesa.jpg", alt: "Setup gamer completo montado na mesa" },
-  { id: 4, src: "/images/perifericos.jpg", alt: "Periféricos do setup: teclado, mouse e headset" },
+  {
+    src: "/images/setup-frente.jpg",
+    alt: "Setup gamer visto de frente",
+  },
+  {
+    src: "/images/setup-lateral-rgb.jpg",
+    alt: "Gabinete do setup",
+  },
+  {
+    src: "/images/setup-mesa.jpg",
+    alt: "Setup gamer completo",
+  },
+  {
+    src: "/images/perifericos.jpg",
+    alt: "Periféricos do setup",
+  },
 ];
 
 export default function Gallery() {
   return (
     <section className="bg-neutral-950 text-white px-6 py-20">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Galeria
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {/* Coluna esquerda: fotos 1, 3 e 4 empilhadas */}
+        {/* Mobile */}
+        <div className="grid gap-6 md:hidden">
+          {galleryImages.map((image, index) => (
+            <div
+              key={index}
+              className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop */}
+        <div className="hidden md:grid grid-cols-2 gap-6 h-[780px]">
+
+          {/* Coluna esquerda */}
           <div className="grid grid-rows-3 gap-6">
-            {[galleryImages[0], galleryImages[2], galleryImages[3]].map((image) => (
-              <div
-                key={image.id}
-                className="relative aspect-video rounded-2xl overflow-hidden border border-neutral-800"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="75vw"
-                />
-              </div>
-            ))}
+
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-800">
+              <Image
+                src={galleryImages[0].src}
+                alt={galleryImages[0].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-800">
+              <Image
+                src={galleryImages[2].src}
+                alt={galleryImages[2].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border border-neutral-800">
+              <Image
+                src={galleryImages[3].src}
+                alt={galleryImages[3].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+
           </div>
 
-          {/* Foto 2: ocupa a altura das três empilhadas */}
-          <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900">
+          {/* Imagem grande */}
+          <div className="relative rounded-2xl overflow-hidden border border-neutral-800">
             <Image
               src={galleryImages[1].src}
               alt={galleryImages[1].alt}
               fill
-              className="object-cover object-[25%_25%]"
-              sizes="50vw"
+              className="object-cover"
             />
           </div>
+
         </div>
       </div>
     </section>
