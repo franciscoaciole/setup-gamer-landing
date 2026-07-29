@@ -4,7 +4,6 @@ import Gallery from "@/components/Gallery";
 import Specs from "@/components/Specs";
 import Performance from "@/components/Performance";
 import Differentials from "@/components/Differentials";
-import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <Specs />
       <Performance />
       <Differentials />
-      <FAQ />
       <FinalCTA />
       <Footer />
     </main>

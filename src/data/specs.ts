@@ -97,27 +97,3 @@ export const differentials: Differential[] = [
       "Monitor de 180Hz, indicado para jogos competitivos que exigem fluidez e resposta rápida.",
   },
 ];
-
-// ---------- PERGUNTAS FREQUENTES ----------
-
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-export const faqItems: FAQItem[] = [
-  {
-    question: "Quais formas de pagamento são aceitas?",
-    answer: "À vista,cartão de crédito ou trocas coerentes.",
-  },
-  {
-    question: "É possível ver o setup funcionando antes de fechar negócio?",
-    answer:
-      "Sim, é possível ver o equipamento funcionando antes da confirmação da compra.",
-  },
-  {
-    question: "Vocês fazem entrega?",
-    answer:
-      "A entrega pode ser combinada conforme a localidade. Entre em contato para verificar a disponibilidade para sua região.",
-  },
-];
