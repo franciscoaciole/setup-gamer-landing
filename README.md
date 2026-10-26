@@ -1,19 +1,18 @@
 # Setup Gamer Landing
 
-Landing page moderna para divulgação de um setup gamer completo, com foco em conversão para WhatsApp e apresentação visual premium.
+Landing page de alto impacto para divulgação de um setup gamer completo, focada em conversão por WhatsApp e apresentação premium do produto.
 
-## Sobre o projeto
+## Visão geral
 
-Este projeto foi desenvolvido em Next.js para apresentar um setup gamer com:
+Este projeto foi desenvolvido em Next.js para vender um setup gamer com:
 
-- hero section impactante
-- galeria de imagens do equipamento
-- especificações técnicas em blocos
+- hero section forte e visualmente impactante
+- galeria com imagens do equipamento
+- especificações técnicas em blocos organizados
 - performance estimada por jogo
 - diferenciais do produto
-- call-to-action para contato via WhatsApp
-
-A estrutura foi pensada para funcionar como uma landing page comercial para venda direta de um setup gamer.
+- CTA para contato direto via WhatsApp
+- melhoras de SEO, acessibilidade e segurança básica de produção
 
 ## Stack
 
@@ -40,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Acesse:
+Acesse a aplicação em:
 
 ```text
 http://localhost:3000
@@ -49,9 +48,9 @@ http://localhost:3000
 ## Scripts
 
 ```bash
-npm run dev   # inicia o ambiente de desenvolvimento
+npm run dev   # inicia o ambiente em desenvolvimento
 npm run build # gera a build de produção
-npm run start # inicia a aplicação em produção
+npm run start # inicia a app em produção localmente
 npm run lint # executa a checagem de lint
 ```
 
@@ -63,6 +62,9 @@ src/
     globals.css
     layout.tsx
     page.tsx
+    manifest.ts
+    robots.ts
+    sitemap.ts
   components/
     Hero.tsx
     Gallery.tsx
@@ -75,28 +77,40 @@ src/
     specs.ts
 public/
   images/
+  icon.svg
 ```
 
 ## Personalização
 
-Os dados do produto estão em `src/data/specs.ts`, incluindo:
+Os dados do produto e do CTA ficam em `src/data/specs.ts`, incluindo:
 
-- nome e subtítulo do setup
+- título do setup
+- headline do hero
+- texto de venda
 - WhatsApp para contato
 - especificações técnicas
-- performance estimada por jogo
-- diferenciais e mensagens de venda
+- desempenho estimado por jogo
+- diferenciais e mensagens de conversão
+
+## SEO e produção
+
+A landing page já conta com:
+
+- metadata Open Graph
+- Twitter Card
+- sitemap
+- robots.txt via rotas do Next
+- manifest para instalação em dispositivos
+- headers de segurança básicos
 
 ## Deploy
 
-O projeto pode ser implantado facilmente em plataformas como Vercel.
+O projeto pode ser implantado facilmente no Vercel ou em qualquer ambiente compatível com Next.js.
 
 ```bash
 npm run build
 ```
 
-Em seguida, faça o deploy no ambiente da sua escolha.
+## Observações finais
 
-## Observações
-
-Este README foi adaptado para a landing page do setup gamer do projeto atual, substituindo o template padrão do Next.js.
+Esta versão já está pronta para uso como landing page funcional de venda direta, com foco em apresentação visual, conversão e presença digital básica.

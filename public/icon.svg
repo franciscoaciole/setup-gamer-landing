@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Setup Gamer logo">
+  <rect width="256" height="256" rx="48" fill="#0a0a0a"/>
+  <rect x="32" y="32" width="192" height="192" rx="36" fill="#111827" stroke="#22c55e" stroke-width="8"/>
+  <path d="M74 162V94h28l22 36 22-36h28v68h-20V122l-30 46-30-46v40H74z" fill="#22c55e"/>
+  <path d="M152 94h30l24 68h-22l-4-12h-28l-4 12h-22l24-68zm10 44h18l-9-26-9 26z" fill="#f9fafb"/>
+</svg>

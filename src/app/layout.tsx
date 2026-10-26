@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://setup-gamer-landing.vercel.app"),
   title: "Setup Gamer Completo | Ryzen 5 + RX 7600 | WhatsApp",
   description:
     "Setup gamer completo com Ryzen 5 5500, RX 7600, monitor 180Hz e periféricos premium. Pronto para uso imediato e com suporte para jogos competitivos.",
@@ -29,6 +30,11 @@ export const metadata: Metadata = {
   applicationName: "Setup Gamer Landing",
   authors: [{ name: "Setup Gamer" }],
   creator: "Setup Gamer",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Setup Gamer Completo | Ryzen 5 + RX 7600",
     description:
@@ -36,6 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Setup Gamer Landing",
+    url: "https://setup-gamer-landing.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
