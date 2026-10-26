@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/data/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://setup-gamer-landing.vercel.app/sitemap.xml",
-    host: "https://setup-gamer-landing.vercel.app",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "@/data/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://setup-gamer-landing.vercel.app"),
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   title: "Setup Gamer Completo | Ryzen 5 + RX 7600 | WhatsApp",
   description:
     "Setup gamer completo com Ryzen 5 5500, RX 7600, monitor 180Hz e periféricos premium. Pronto para uso imediato e com suporte para jogos competitivos.",
@@ -42,13 +46,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Setup Gamer Landing",
-    url: "https://setup-gamer-landing.vercel.app",
+    url: SITE_URL,
+    images: [
+      {
+        url: "/images/setup-frente.jpg",
+        alt: "Setup gamer completo visto de frente",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Setup Gamer Completo | Ryzen 5 + RX 7600",
     description:
       "Placa de vídeo RX 7600, Ryzen 5 5500, monitor 180Hz e periféricos premium.",
+    images: ["/images/setup-frente.jpg"],
   },
   robots: {
     index: true,

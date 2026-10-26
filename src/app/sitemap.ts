@@ -1,13 +1,10 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://setup-gamer-landing.vercel.app";
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: SITE_URL,
       priority: 1,
     },
   ];
