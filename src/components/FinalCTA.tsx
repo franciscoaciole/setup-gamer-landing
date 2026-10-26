@@ -26,7 +26,8 @@ export default function FinalCTA() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 hover:scale-105 transition-all duration-300 text-black font-semibold px-10 py-5 rounded-full text-lg shadow-lg shadow-green-500/20"
+          aria-label="Falar com o vendedor no WhatsApp"
+          className="mt-10 inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 hover:scale-105 transition-all duration-300 text-black font-semibold px-10 py-5 rounded-full text-lg shadow-lg shadow-green-500/20 focus:outline-none focus-visible:ring-4 focus-visible:ring-green-400/70"
         >
           {productInfo.ctaText}
         </a>
